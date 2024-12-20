@@ -13,6 +13,10 @@ public class StudentRepository {
     studentMap.put(student.getName(), student);
   }
 
+  public void delete(Student student) {
+    studentMap.remove(student.getName());
+  }
+
   public Optional<Student> findByName(String name) {
     return Optional.ofNullable(studentMap.get(name));
   }
